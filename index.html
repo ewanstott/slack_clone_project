@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slack is your productivity platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fonts.css" />
   </head>
   <header>
     <div class="container">
@@ -34,11 +36,12 @@
         <button type="button" class="button-1">
           Sign Up With Email Address
         </button>
-        <button type="button" class="button-google"></button>
+        <button type="button" class="button-google">Sign Up With Google</button>
         <video
           src="Videos/Team discussing work in the Slack app.mp4"
           autoplay
           loop
+          class="video"
         ></video>
       </div>
     </div>
@@ -46,22 +49,27 @@
     <div class="container">
       <div class="trust">
         <h3>TRUSTED BY COMPANIES ALL OVER THE WORLD</h3>
-        <img src="Images/logo-natwest.png" alt="natwest" />
-        <img src="Images/gsk_logo.png" alt="gsk" />
-        <img src="Images/sky_logo.png" alt="sky" />
-        <img src="Images/uber.png" alt="uber" />
-        <img src="Images/airbnb-logo.png" alt="airbnb" />
-        <img src="Images/deliveroo_logo.png" alt="deliveroo" />
+        <div class="logos">
+          <img src="Images/logo-natwest.png" alt="natwest" class="logo" />
+          <img src="Images/gsk_logo.png" alt="gsk" class="logo" />
+          <img src="Images/sky_logo.png" alt="sky" class="logo" />
+          <img src="Images/uber.png" alt="uber" />
+          <img src="Images/airbnb-logo.png" alt="airbnb" class="logo" />
+          <img src="Images/deliveroo_logo.png" alt="deliveroo" class="logo" />
+        </div>
       </div>
     </div>
 
     <div class="container background-cream">
-      <div class="value-prop-1">
+      <div class="video-container">
         <video
           src="Videos/Using the Workday integration to quickly file an expense report in the Slack app.mp4"
           autoplay
           loop
+          class="video left"
         ></video>
+      </div>
+      <div class="value-prop one">
         <h2>Move faster with your tools in one place</h2>
         <p>
           Automate away routine tasks with the power of generative AI and
@@ -74,30 +82,36 @@
     </div>
 
     <div class="container background-cream">
-      <div class="value-prop-2">
+      <div class="container-right">
         <video
           src="/Videos/A user starting a huddle and recording a video clip with the Slack app.mp4"
           autoplay
           loop
+          class="video"
         ></video>
-        <h2>Choose how you want to work</h2>
-        <p>
-          In Slack, you've got all the flexibility to work when, where and how
-          it’s best for you. You can easily chat, send audio and video clips, or
-          join a huddle to talk things through live.
-        </p>
-        <a href="#">Learn more about flexible communication</a>
-        <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+      </div>
+      <div class="container-right">
+        <div class="value-prop two">
+          <h2>Choose how you want to work</h2>
+          <p>
+            In Slack, you've got all the flexibility to work when, where and how
+            it’s best for you. You can easily chat, send audio and video clips,
+            or join a huddle to talk things through live.
+          </p>
+          <a href="#">Learn more about flexible communication</a>
+          <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+        </div>
       </div>
     </div>
 
     <div class="container background-cream">
-      <div class="value-prop-3">
-        <video
-          src="/Videos/A connected team discussing work in multiple channels in the Slack app.mp4"
-          autoplay
-          loop
-        ></video>
+      <video
+        src="/Videos/A connected team discussing work in multiple channels in the Slack app.mp4"
+        autoplay
+        loop
+        class="video left"
+      ></video>
+      <div class="value-prop three">
         <h2>Bring your team together</h2>
         <p>
           At the heart of Slack are channels: organised spaces for everyone and
@@ -109,17 +123,21 @@
       </div>
     </div>
 
-    <div class="container background-white">
-      <div class="value-prop-4">
-        <h2>Teams large and small rely on Slack</h2>
-        <p>
-          Slack securely scales up to support collaboration at the world's
-          biggest companies.
-        </p>
+    <div class="container-two">
+      <div class="container background-white">
+        <!-- <div class="value-prop four"> -->
+        <div class="teams">
+          <h2>Teams large and small rely on Slack</h2>
+          <p>
+            Slack securely scales up to support collaboration at the world's
+            biggest companies.
+          </p>
+        </div>
         <button type="button" class="button-white">
           Meet Slack For Enterprise
         </button>
         <button type="button" class="button-purple">Talk To Sales</button>
+
         <div class="percentages">
           <h2>85%</h2>
           <p>of users say that Slack has improved communication*</p>
@@ -132,6 +150,7 @@
           src="/Videos/Video featuring a Slack customer,_.mp4"
           autoplay
           loop
+          class="video customer-video"
         ></video>
         <div class="testimonial">
           <p>
@@ -141,9 +160,11 @@
               important tools.'</em
             >
           </p>
+        </div>
+        <div class="matt-beal">
           <h4>Matt Beal</h4>
           <p>Director of Technology Strategy and Architecture, Vodafone</p>
-          <a href="#">See more customer stories</a>
+          <a class="customer-stories" href="#">See more customer stories</a>
           <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
         </div>
         <p class="asterisk">
@@ -151,51 +172,52 @@
           users in the US, UK, Australia and Canada with a ± 2% margin of error
           at 95% CI (December 2021).
         </p>
-      </div>
-    </div>
-
-    <div class="container background-cream">
-      <h2>Take a deeper dive into a new way to work</h2>
-      <div class="carousel">
-        <img src="Images/promo-card-dreamforce-2023.png" alt="" />
-        <p>Event</p>
-        <h2>Ready for the future of AI in Slack?</h2>
-        <a href="#">Watch On Demand</a>
-        <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+        <!-- </div> -->
       </div>
 
-      <div class="carousel">
-        <img src="Images/wtny-resource-tile.jpg" alt="" />
-        <p>On Demand</p>
-        <h2>
-          Big things are launching. Relive the highlights of World Tour New
-          York!
-        </h2>
-        <a href="#">Watch Now</a>
-        <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+      <div class="container background-cream">
+        <h2>Take a deeper dive into a new way to work</h2>
+        <div class="carousel">
+          <img src="Images/promo-card-dreamforce-2023.png" alt="" />
+          <p>Event</p>
+          <h2>Ready for the future of AI in Slack?</h2>
+          <a href="#">Watch On Demand</a>
+          <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="carousel">
+          <img src="Images/wtny-resource-tile.jpg" alt="" />
+          <p>On Demand</p>
+          <h2>
+            Big things are launching. Relive the highlights of World Tour New
+            York!
+          </h2>
+          <a href="#">Watch Now</a>
+          <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="carousel">
+          <img src="Images/promo-open-ai.jpg" alt="" />
+          <p>Customer Story</p>
+          <h2>How OpenAI expands ChatGPT with Slack.</h2>
+          <a href="#">Read More</a>
+          <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
+        </div>
       </div>
 
-      <div class="carousel">
-        <img src="Images/promo-open-ai.jpg" alt="" />
-        <p>Customer Story</p>
-        <h2>How OpenAI expands ChatGPT with Slack.</h2>
-        <a href="#">Read More</a>
-        <img src="Images/arrow_icon.svg" alt="arrow" class="arrow" />
-      </div>
-    </div>
-
-    <div class="container background-purple">
-      <div class="value-prop-5">
-        <h1>See all that you can accomplish with Slack</h1>
-        <button type="button" class="button-white">Try For Free</button>
-        <button type="button" class="button-purple">Talk To Sales</button>
+      <div class="container background-purple">
+        <div class="value-prop five">
+          <h1>See all that you can accomplish with Slack</h1>
+          <button type="button" class="button-white">Try For Free</button>
+          <button type="button" class="button-purple">Talk To Sales</button>
+        </div>
       </div>
     </div>
   </body>
 
   <footer>
     <div class="container">
-      <img src="/Images/Slack_icon_2019.png" alt="slack" />
+      <img src="/Images/Slack_icon_2019.png" height="50px" alt="slack" />
     </div>
     <ul>
       <li><a href="#">Why Slack?</a></li>

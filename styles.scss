@@ -1,0 +1,217 @@
+// Colors:
+$themePurpleColour: #4a154b;
+$themeCreamColour: rgb(244, 237, 228);
+// yellow: rgb(236, 178, 46)
+
+// @mixin
+// General CSS
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Inter", Helvetica;
+  letter-spacing: 0.5px;
+  box-sizing: border-box;
+  //   max-width: 100%;
+  //   overflow-x: hidden;
+  //   display: flex;
+  //   flex-direction: column;
+}
+
+p {
+  font-size: 16px;
+}
+
+.container {
+  //   padding: 1rem 0;
+  //   background-color: $themeCreamColour;
+  //   display: flex;
+  //   flex-direction: column;
+}
+
+.customer-video {
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  max-height: 350px !important;
+}
+
+.video {
+  max-width: 100%;
+  //   height: auto;
+  max-height: 400px;
+  //   display: inline-block;
+  //   vertical-align: baseline;
+  //   object-fit: contain;
+  //   overflow-clip-margin: content-box;
+  //   overflow: clip;
+}
+
+.arrow {
+  width: 20px;
+}
+
+// Hero
+.hero {
+  background-color: $themePurpleColour;
+  padding: 25px;
+}
+.hero h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.hero h1 span {
+  color: rgb(236, 178, 46);
+}
+
+.hero p {
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+// Trust
+
+.trust {
+  background-color: $themeCreamColour;
+}
+
+.trust h3 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 10px;
+}
+
+// .trust {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+// }
+
+// Value Props
+
+.background-cream {
+  background-color: $themeCreamColour;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.value-prop,
+.teams,
+.percentages {
+  padding: 20px;
+  //   margin: 10px;
+}
+
+.value-prop h2 {
+  font-size: 2rem;
+  max-width: 500px;
+  padding-bottom: 10px;
+}
+
+.value-prop p {
+  line-height: 1.44;
+  max-width: 500px;
+  padding-bottom: 10px;
+}
+.value-prop a {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.container-right {
+  display: flex;
+  justify-content: flex-end;
+  //   align-items: center;
+}
+
+.teams {
+  text-align: center;
+}
+
+.teams h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.teams p {
+  padding: 10px;
+  margin: 10px;
+  line-height: 1.44;
+}
+
+.percentages {
+  font-size: 2.3rem;
+  text-align: center;
+  color: $themePurpleColour;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.percentages p {
+  color: black;
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+
+// Testimonial
+
+.testimonial {
+  padding-top: 25px;
+  margin: 25px;
+  font-weight: 200;
+}
+
+.testimonial p {
+  font-size: 1.5rem;
+}
+
+.matt-beal {
+  padding-top: 10px;
+  margin: 25px;
+  padding-bottom: 10px;
+}
+.customer-stories {
+  //   padding-top: 25px;
+}
+
+.container-two h2,
+.container-two p,
+.container-two a {
+  padding: 20px;
+}
+
+.asterisk {
+  color: grey;
+  font-size: 14px;
+}
+
+.background-purple {
+  background-color: $themePurpleColour;
+  color: white;
+  text-align: center;
+  min-height: 370px;
+  clip-path: ellipse(105% 100% at center top);
+  padding-top: 5rem;
+}
+
+// Footer
+footer {
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+}
