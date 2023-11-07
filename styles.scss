@@ -147,7 +147,7 @@ p {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* menu placing */
   align-items: center;
   padding: 0 25px;
   transition: 0.3s;
@@ -255,6 +255,45 @@ p {
   transform: rotate(45deg);
   width: 30px;
 }
+
+// Submenu Level 1
+
+.submenu {
+  position: absolute;
+  width: 140px;
+  //   left: 0;
+  display: none;
+  background-color: $themePurpleColour;
+}
+
+.menu li:hover .submenu {
+  display: block;
+  animation: slideup 0.3s ease;
+}
+
+// Animation Keyframes
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// @keyframes slideleft {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(18px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: none;
+//   }
+// }
 
 // Hero
 .hero {
@@ -429,7 +468,7 @@ footer ul {
 
 // Media Queries
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 900px) {
   .hamburger,
   .toggle-menu {
     display: block;
@@ -444,11 +483,11 @@ footer ul {
     position: fixed;
     top: 0;
     right: -300px;
-    background: $themePurpleColour;
+    background: white;
     width: 300px;
     height: 100%;
     padding-top: 50px;
-    // transition: right 0.3s ease;
+    transition: right 0.3s ease;
   }
   .menu li {
     width: 100%;
@@ -456,6 +495,20 @@ footer ul {
   .menu li a,
   .menu li a:hover {
     padding: 20px;
-    // font-size: ;
+    color: black;
+    font-size: 1.2rem;
+  }
+
+  .toggle-menu:checked + .hamburger {
+    background-color: black;
+    z-index: 3;
+  }
+}
+
+// When screen bigger than 900px:
+@media screen and (min-width: 900px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
   }
 }
