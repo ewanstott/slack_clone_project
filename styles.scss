@@ -4,6 +4,26 @@ $themeCreamColour: rgb(244, 237, 228);
 // yellow: rgb(236, 178, 46)
 
 // @mixin
+
+@mixin button {
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.28;
+  padding: 19px 40px 20px;
+  display: block;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #611f69;
+  width: 100%;
+}
+
+// .teams .button-white {
+//   margin: 5px;
+// }
+
 // General CSS
 * {
   padding: 0px;
@@ -47,6 +67,46 @@ p {
 
 .arrow {
   width: 20px;
+}
+
+.button-white {
+  @include button;
+  background-color: white;
+  color: $themePurpleColour;
+  border: 1px solid $themePurpleColour;
+}
+
+.button-purple {
+  @include button;
+  background-color: $themePurpleColour;
+  color: white;
+  border: 1px solid white;
+}
+
+.button-blue {
+  @include button;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 0.875rem;
+  width: 100%;
+  background-color: rgb(83, 131, 236);
+  color: white;
+  border: 1px solid $themePurpleColour;
+}
+.button-blue img {
+  width: 30px;
+  //   background-color: white;
+  background: #fff;
+  //   margin-right: 100px;
+  //   position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 49px;
+  padding: 0.875rem;
+  margin-right: 0;
+  border-radius: 2px;
 }
 
 // Hero
