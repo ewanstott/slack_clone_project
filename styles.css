@@ -138,7 +138,7 @@ p {
   display: flex;
   justify-content: space-between; /* menu placing */
   align-items: center;
-  padding: 0 25px;
+  padding: 15px 25px;
   transition: 0.3s;
   background-color: #4a154b;
 }
@@ -177,7 +177,7 @@ p {
   display: block;
   padding: 5px 10px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 550;
   line-height: 1;
   transition: 0.3s;
 }
@@ -241,24 +241,51 @@ p {
   top: 0;
   transform: rotate(-45deg);
   width: 30px;
+  background: black;
 }
 
 .navigation input:checked ~ .hamburger::after {
   top: 0;
   transform: rotate(45deg);
   width: 30px;
+  background: black;
 }
 
+.menu-arrow {
+  right: 5%; /* Adjust the right distance as needed */
+  top: 45%;
+  width: 8px;
+  height: 5px;
+  background-size: 8px 5px;
+  background-position-y: center;
+  transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Styles for the menu arrow */
 .submenu {
   position: absolute;
   width: 140px;
   display: none;
-  background-color: #4a154b;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .menu li:hover .submenu {
   display: block;
   animation: slideup 0.3s ease;
+}
+
+.menu li:hover img {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  padding: 10px 5px;
+  font-weight: 100;
+}
+
+.submenu li a {
+  color: black;
 }
 
 @keyframes slideup {
@@ -377,6 +404,20 @@ p {
   color: black;
   font-size: 12px;
   padding-bottom: 30px;
+}
+
+.video-container {
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  top: 35%;
+  left: 250px;
+  width: 80px;
+  height: 80px;
+  background: url(Images/blue_play_icon.svg) no-repeat center/cover;
+  cursor: pointer;
 }
 
 .testimonial {
