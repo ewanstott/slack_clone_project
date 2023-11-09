@@ -101,35 +101,42 @@ p {
   border: 1px solid white;
 }
 
-.button-blue {
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  padding: 19px 40px 20px;
-  display: block;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
+.google-btn {
   width: 100%;
-  width: 100%;
-  background-color: rgb(83, 131, 236);
-  color: white;
-  border: 1px solid #4a154b;
-}
-
-.button-blue img {
-  width: 30px;
-  background: #fff;
-  top: 4px;
-  bottom: 4px;
-  left: 4px;
-  width: 49px;
-  padding: 0.875rem;
-  margin-right: 0;
+  height: 50px;
+  background-color: #4285f4;
   border-radius: 2px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+.google-btn .google-icon-wrapper {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 40px;
+  height: 41px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.google-btn .google-icon {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 18px;
+  height: 18px;
+}
+.google-btn .btn-text {
+  margin: 11px 11px 0 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.google-btn:hover {
+  box-shadow: 0 0 6px #4285f4;
+}
+.google-btn:active {
+  background: #1669f2;
 }
 
 .header {
@@ -142,17 +149,13 @@ p {
   background-color: #4a154b;
 }
 
-.logo-white {
-  display: none;
-}
-
 .logo a {
   display: block;
 }
 
-.logo a img {
-  display: block;
-  width: 100%;
+.logo-white a img {
+  display: inline-block;
+  height: 60px;
 }
 
 .navigation {
@@ -172,6 +175,7 @@ p {
   background: white;
   width: 100%;
   height: 100%;
+  top: 100%;
   padding: 25px;
   transition: right 0.3s ease;
 }
@@ -351,13 +355,19 @@ p {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 14px;
 }
 
-.logos {
+.trust-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.trust-logos img {
+  max-height: 30px;
+  margin: 10px;
 }
 
 .logo {
@@ -482,11 +492,48 @@ p {
 }
 
 footer {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
+  margin: 10px;
 }
 
-footer ul {
+footer ul li {
   list-style: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  height: 40px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+.footer-submenu {
+  display: none;
+  position: absolute;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.footer-menu li:hover .footer-submenu {
+  display: block;
+  animation: slideup 0.3s ease;
+}
+
+.footer-submenu li a {
+  text-transform: inherit;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  font-weight: 100;
 }
 
 @media screen and (min-width: 900px) {

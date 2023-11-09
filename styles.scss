@@ -58,12 +58,12 @@ p {
   font-size: 16px;
 }
 
-.container {
-  //   padding: 1rem 0;
-  //   background-color: $themeCreamColour;
-  //   display: flex;
-  //   flex-direction: column;
-}
+// .container {
+//   padding: 1rem 0;
+//   background-color: $themeCreamColour;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .customer-video {
   border-top-right-radius: 200px;
@@ -114,31 +114,50 @@ p {
   border: 1px solid white;
 }
 
-.button-blue {
-  @include button;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   padding: 0.875rem;
+// Google Button
+
+$white: #fff;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+
+.google-btn {
   width: 100%;
-  background-color: rgb(83, 131, 236);
-  color: white;
-  border: 1px solid $themePurpleColour;
-}
-.button-blue img {
-  width: 30px;
-  //   background-color: white;
-  background: #fff;
-  //   margin-right: 100px;
-  //   position: absolute;
-  top: 4px;
-  bottom: 4px;
-  left: 4px;
-  width: 49px;
-  padding: 0.875rem;
-  margin-right: 0;
+  height: 50px;
+  background-color: $google-blue;
   border-radius: 2px;
-  //   padding: 0 25px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 4px;
+    width: 40px;
+    height: 41px;
+    border-radius: 2px;
+    background-color: $white;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    // float: right;
+    margin: 11px 11px 0 0;
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    // font-family: "Roboto";
+  }
+  &:hover {
+    box-shadow: 0 0 6px $google-blue;
+  }
+  &:active {
+    background: $button-active-blue;
+  }
 }
 
 // Header
@@ -155,15 +174,15 @@ p {
 }
 
 .logo-white {
-  display: none;
+  //   display: none;
 }
 
 .logo a {
   display: block;
 }
-.logo a img {
-  display: block;
-  width: 100%;
+.logo-white a img {
+  display: inline-block;
+  height: 60px;
 }
 
 .navigation {
@@ -185,6 +204,7 @@ p {
   background: white;
   width: 100%;
   height: 100%;
+  top: 100%;
   padding: 25px;
   transition: right 0.3s ease;
 }
@@ -384,13 +404,19 @@ p {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-size: 14px;
 }
 
-.logos {
+.trust-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.trust-logos img {
+  max-height: 30px;
+  margin: 10px;
 }
 
 .logo {
@@ -455,6 +481,9 @@ p {
   padding: 10px;
   margin: 10px;
   line-height: 1.44;
+}
+
+.teams .button-white {
 }
 
 .percentages {
@@ -528,11 +557,54 @@ p {
 
 // Footer
 footer {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 20px;
+  margin: 10px;
 }
 
-footer ul {
+// Footer Menu
+
+footer ul li {
   list-style: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  height: 40px;
+  //   position: relative;
+}
+
+footer ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+// Footer Submenu
+
+.footer-submenu {
+  display: none;
+  position: absolute;
+  text-decoration: none;
+  background-color: white;
+  //   left: 150px;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.footer-menu li:hover .footer-submenu {
+  display: block;
+  animation: slideup 0.3s ease;
+}
+
+.footer-submenu li a {
+  text-transform: inherit;
+  text-decoration: none;
+  color: black;
+  list-style: none;
+  font-weight: 100;
 }
 
 // Media Queries
