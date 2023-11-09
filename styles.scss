@@ -141,10 +141,10 @@ p {
   //   padding: 0 25px;
 }
 
-// Menu
+// Header
 
 .header {
-  position: relative;
+  //   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between; /* menu placing */
@@ -152,6 +152,10 @@ p {
   padding: 15px 25px;
   transition: 0.3s;
   background-color: $themePurpleColour;
+}
+
+.logo-white {
+  display: none;
 }
 
 .logo a {
@@ -168,13 +172,21 @@ p {
   align-items: center;
 }
 
+// Menu
+
 .menu {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  z-index: 1;
-  transition: 0.5s;
+  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background: white;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  transition: right 0.3s ease;
 }
 
 .menu li {
@@ -191,7 +203,7 @@ p {
   line-height: 1;
   transition: 0.3s;
 }
-.menu li a:hover {
+.submenu li a:hover {
   text-decoration: underline;
 }
 
@@ -203,7 +215,8 @@ p {
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
-  transition: 0.3s;
+  //   transition: 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .hamburger:before,
@@ -236,11 +249,6 @@ p {
   opacity: 0;
 }
 
-.hamburger,
-.toggle-menu {
-  display: none;
-}
-
 .navigation input:checked ~ .hamburger {
   background: transparent;
 }
@@ -258,6 +266,10 @@ p {
   background: black;
 }
 
+.navigation input:checked ~ .menu {
+  right: 0;
+}
+
 .menu-arrow {
   //   content: "";
   //   display: block;
@@ -272,22 +284,28 @@ p {
   //   transform: translateY(-50%);
 }
 
-/* Styles for the menu arrow */
-// .menu-arrow {
-//   position: absolute;
-//   right: 10px;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   font-size: 14px;
-//   color: white;
-// }
+.hamburger,
+.toggle-menu {
+  display: block;
+}
+
+.menu li a,
+.menu li a:hover {
+  padding: 20px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.toggle-menu:checked + .hamburger {
+  background-color: black;
+  z-index: 3;
+}
 
 // Submenu Level 1
 
 .submenu {
   position: absolute;
-  width: 140px;
-  //   left: 0;
+  width: 500px;
   display: none;
   background-color: white;
   border-radius: 5px;
@@ -517,54 +535,64 @@ footer ul {
   list-style: none;
 }
 
-.navigation input:checked ~ .menu {
-  right: 0;
-}
-
 // Media Queries
-// Move below to default CSS??
 
-@media screen and (max-width: 900px) {
-  .hamburger,
-  .toggle-menu {
-    display: block;
-  }
-  .header {
-    padding: 10px 20px;
-  }
-  .menu {
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    background: white;
-    width: 300px;
-    height: 100%;
-    padding-top: 50px;
-    transition: right 0.3s ease;
-  }
-  .menu li {
-    width: 100%;
-  }
-  .menu li a,
-  .menu li a:hover {
-    padding: 20px;
-    color: black;
-    font-size: 1.2rem;
-  }
-
-  .toggle-menu:checked + .hamburger {
-    background-color: black;
-    z-index: 3;
-  }
-}
-
-// When screen bigger than 900px:
+// When screen bigger than 900px: OR 1070px
 @media screen and (min-width: 900px) {
   .header {
     display: flex;
     justify-content: flex-start;
+  }
+
+  //   .logo-white {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+
+  .logo {
+    display: none;
+  }
+  .logo-white {
+    display: block;
+  }
+  .logo-white a img {
+    display: inline-block;
+    height: 60px;
+  }
+
+  .hamburger,
+  .toggle-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    right: 0;
+    height: 100%;
+    padding: 25px;
+    background: $themePurpleColour;
+    color: white;
+    transition: none;
+  }
+
+  .navigation input {
+    display: none;
+  }
+
+  .menu li a,
+  .menu li a:hover {
+    padding: 20px;
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .menu ul li a {
+    color: black;
   }
 }

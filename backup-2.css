@@ -1,13 +1,68 @@
+// Colors:
+$themePurpleColour: #4a154b;
+$themeCreamColour: rgb(244, 237, 228);
+// yellow: rgb(236, 178, 46)
+
+// @mixin
+
+@mixin button {
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.28;
+  padding: 19px 40px 20px;
+  display: block;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #611f69;
+  width: 100%;
+}
+
+@mixin menu-button {
+  height: 45px;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.28;
+  margin-right: 1.25rem;
+  margin-left: 0.5rem;
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #611f69;
+}
+
+// .teams .button-white {
+//   margin: 5px;
+// }
+
+// General CSS
 * {
   padding: 0px;
   margin: 0px;
   font-family: "Inter", Helvetica;
   letter-spacing: 0.5px;
   box-sizing: border-box;
+  //   max-width: 100%;
+  //   overflow-x: hidden;
+  //   display: flex;
+  //   flex-direction: column;
 }
 
 p {
   font-size: 16px;
+}
+
+.container {
+  //   padding: 1rem 0;
+  //   background-color: $themeCreamColour;
+  //   display: flex;
+  //   flex-direction: column;
 }
 
 .customer-video {
@@ -18,7 +73,13 @@ p {
 
 .video {
   max-width: 100%;
+  //   height: auto;
   max-height: 400px;
+  //   display: inline-block;
+  //   vertical-align: baseline;
+  //   object-fit: contain;
+  //   overflow-clip-margin: content-box;
+  //   overflow: clip;
 }
 
 .arrow {
@@ -26,103 +87,50 @@ p {
 }
 
 .button-white-menu {
-  height: 45px;
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  margin-right: 1.25rem;
-  margin-left: 0.5rem;
-  display: block;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
+  @include menu-button;
   background-color: white;
-  color: #4a154b;
-  border: 1px solid #4a154b;
+  color: $themePurpleColour;
+  border: 1px solid $themePurpleColour;
 }
 
 .button-purple-menu {
-  height: 45px;
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  margin-right: 1.25rem;
-  margin-left: 0.5rem;
-  display: block;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
-  background-color: #4a154b;
+  @include menu-button;
+  background-color: $themePurpleColour;
   color: white;
   border: 1px solid white;
 }
 
 .button-white {
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  padding: 19px 40px 20px;
-  display: block;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
-  width: 100%;
+  @include button;
   background-color: white;
-  color: #4a154b;
-  border: 1px solid #4a154b;
+  color: $themePurpleColour;
+  border: 1px solid $themePurpleColour;
 }
 
 .button-purple {
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  padding: 19px 40px 20px;
-  display: block;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
-  width: 100%;
-  background-color: #4a154b;
+  @include button;
+  background-color: $themePurpleColour;
   color: white;
   border: 1px solid white;
 }
 
 .button-blue {
-  border-radius: 4px;
-  text-align: center;
-  font-weight: 700;
-  line-height: 1.28;
-  padding: 19px 40px 20px;
-  display: block;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px #611f69;
-  width: 100%;
+  @include button;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   padding: 0.875rem;
   width: 100%;
   background-color: rgb(83, 131, 236);
   color: white;
-  border: 1px solid #4a154b;
+  border: 1px solid $themePurpleColour;
 }
-
 .button-blue img {
   width: 30px;
+  //   background-color: white;
   background: #fff;
+  //   margin-right: 100px;
+  //   position: absolute;
   top: 4px;
   bottom: 4px;
   left: 4px;
@@ -130,26 +138,25 @@ p {
   padding: 0.875rem;
   margin-right: 0;
   border-radius: 2px;
+  //   padding: 0 25px;
 }
 
+// Menu
+
 .header {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between; /* menu placing */
   align-items: center;
   padding: 15px 25px;
   transition: 0.3s;
-  background-color: #4a154b;
-}
-
-.logo-white {
-  display: none;
+  background-color: $themePurpleColour;
 }
 
 .logo a {
   display: block;
 }
-
 .logo a img {
   display: block;
   width: 100%;
@@ -163,17 +170,11 @@ p {
 
 .menu {
   display: flex;
-  justify-content: start;
-  flex-direction: column;
-  align-items: flex-start;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  background: white;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  transition: right 0.3s ease;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  transition: 0.5s;
 }
 
 .menu li {
@@ -190,8 +191,7 @@ p {
   line-height: 1;
   transition: 0.3s;
 }
-
-.submenu li a:hover {
+.menu li a:hover {
   text-decoration: underline;
 }
 
@@ -203,7 +203,7 @@ p {
   border-radius: 10px;
   cursor: pointer;
   z-index: 2;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 
 .hamburger:before,
@@ -221,7 +221,6 @@ p {
   top: -8px;
   width: 20px;
 }
-
 .hamburger:after {
   top: 8px;
   width: 20px;
@@ -237,6 +236,11 @@ p {
   opacity: 0;
 }
 
+.hamburger,
+.toggle-menu {
+  display: none;
+}
+
 .navigation input:checked ~ .hamburger {
   background: transparent;
 }
@@ -247,7 +251,6 @@ p {
   width: 30px;
   background: black;
 }
-
 .navigation input:checked ~ .hamburger::after {
   top: 0;
   transform: rotate(45deg);
@@ -255,11 +258,10 @@ p {
   background: black;
 }
 
-.navigation input:checked ~ .menu {
-  right: 0;
-}
-
 .menu-arrow {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
   right: 5%; /* Adjust the right distance as needed */
   top: 45%;
   width: 8px;
@@ -267,6 +269,7 @@ p {
   background-size: 8px 5px;
   background-position-y: center;
   transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  //   transform: translateY(-50%);
 }
 
 .hamburger,
@@ -286,9 +289,12 @@ p {
   z-index: 3;
 }
 
+// Submenu Level 1
+
 .submenu {
   position: absolute;
-  width: 500px;
+  width: 140px;
+  //   left: 0;
   display: none;
   background-color: white;
   border-radius: 5px;
@@ -312,6 +318,8 @@ p {
   color: black;
 }
 
+// Animation Keyframes
+
 @keyframes slideup {
   0% {
     opacity: 0;
@@ -322,11 +330,23 @@ p {
     transform: none;
   }
 }
+
+// @keyframes slideleft {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(18px);
+//   }
+//   100% {
+//     opacity: 1;
+//     transform: none;
+//   }
+// }
+
+// Hero
 .hero {
-  background-color: #4a154b;
+  background-color: $themePurpleColour;
   padding: 25px;
 }
-
 .hero h1 {
   color: white;
   text-align: center;
@@ -343,8 +363,10 @@ p {
   padding: 20px 20px;
 }
 
+// Trust
+
 .trust {
-  background-color: rgb(244, 237, 228);
+  background-color: $themeCreamColour;
 }
 
 .trust h3 {
@@ -364,8 +386,15 @@ p {
   margin: 10px;
 }
 
+// .trust {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+// }
+
+// Value Props
+
 .background-cream {
-  background-color: rgb(244, 237, 228);
+  background-color: $themeCreamColour;
 }
 
 .background-white {
@@ -376,6 +405,7 @@ p {
 .teams,
 .percentages {
   padding: 20px;
+  //   margin: 10px;
 }
 
 .value-prop h2 {
@@ -389,7 +419,6 @@ p {
   max-width: 500px;
   padding-bottom: 10px;
 }
-
 .value-prop a {
   margin-bottom: 1rem;
   cursor: pointer;
@@ -399,6 +428,7 @@ p {
 .container-right {
   display: flex;
   justify-content: flex-end;
+  //   align-items: center;
 }
 
 .teams {
@@ -419,11 +449,10 @@ p {
 .percentages {
   font-size: 2.3rem;
   text-align: center;
-  color: #4a154b;
+  color: $themePurpleColour;
   max-width: 200px;
   margin: 0 auto;
 }
-
 .percentages p {
   color: black;
   font-size: 12px;
@@ -438,11 +467,14 @@ p {
   position: absolute;
   top: 35%;
   left: 250px;
+  //   transform: translate(-50%, -250%);
   width: 80px;
   height: 80px;
   background: url(Images/blue_play_icon.svg) no-repeat center/cover;
   cursor: pointer;
 }
+
+// Testimonial
 
 .testimonial {
   padding-top: 25px;
@@ -459,6 +491,9 @@ p {
   margin: 25px;
   padding-bottom: 10px;
 }
+.customer-stories {
+  //   padding-top: 25px;
+}
 
 .container-two h2,
 .container-two p,
@@ -472,15 +507,15 @@ p {
 }
 
 .background-purple {
-  background-color: #4a154b;
+  background-color: $themePurpleColour;
   color: white;
   text-align: center;
   min-height: 370px;
-  -webkit-clip-path: ellipse(105% 100% at center top);
-          clip-path: ellipse(105% 100% at center top);
+  clip-path: ellipse(105% 100% at center top);
   padding-top: 5rem;
 }
 
+// Footer
 footer {
   padding: 20px;
 }
@@ -489,39 +524,37 @@ footer ul {
   list-style: none;
 }
 
+.navigation input:checked ~ .menu {
+  right: 0;
+}
+
+// Media Queries
+// Move below to default CSS??
+
+@media screen and (max-width: 900px) {
+  .menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background: white;
+    width: 300px;
+    height: 100%;
+    padding-top: 50px;
+    transition: right 0.3s ease;
+  }
+}
+
+// When screen bigger than 900px:
 @media screen and (min-width: 900px) {
   .header {
     display: flex;
     justify-content: flex-start;
   }
-  .logo {
-    display: none;
-  }
-  .logo-white {
-    display: block;
-  }
-  .logo-white a img {
-    display: inline-block;
-    height: 60px;
-  }
   .hamburger,
   .toggle-menu {
-    display: none;
-  }
-  .menu {
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    right: 0;
-    height: 100%;
-    padding: 25px;
-    background: #4a154b;
-    color: white;
-    transition: none;
-  }
-  .navigation input {
     display: none;
   }
   .menu li a,
@@ -530,7 +563,4 @@ footer ul {
     color: white;
     font-size: 0.8rem;
   }
-  .menu ul li a {
-    color: black;
-  }
-}/*# sourceMappingURL=styles.css.map */
+}
