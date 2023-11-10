@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.container-hero {
+  display: flex;
+  flex-direction: column;
+}
+
 p {
   font-size: 16px;
 }
@@ -182,6 +187,7 @@ p {
   height: 100%;
   padding: 25px;
   transition: right 0.3s ease;
+  z-index: 3;
 }
 
 .menu li {
@@ -210,7 +216,7 @@ p {
   background: #fff;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 4;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -240,7 +246,6 @@ p {
   right: 20px;
   width: 30px;
   height: 100%;
-  z-index: 3;
   cursor: pointer;
   opacity: 0;
 }
@@ -288,7 +293,7 @@ p {
 
 .toggle-menu:checked + .hamburger {
   background-color: black;
-  z-index: 3;
+  z-index: 4;
 }
 
 .submenu {
@@ -512,7 +517,6 @@ footer ul li {
   list-style: none;
   font-weight: 700;
   font-size: 0.875rem;
-  height: 40px;
 }
 
 footer ul li a {
@@ -523,9 +527,7 @@ footer ul li a {
 
 .footer-submenu {
   display: none;
-  position: absolute;
   text-decoration: none;
-  background-color: white;
   border-radius: 5px;
   padding: 10px 5px;
   width: 100%;
@@ -562,6 +564,9 @@ footer ul li a {
 }
 
 @media screen and (min-width: 767px) {
+  .container-hero {
+    flex-direction: row;
+  }
   .hero h1 {
     max-width: 65%;
     text-align: left;
@@ -589,6 +594,20 @@ footer ul li a {
   .social-menu a {
     font-size: 18px;
     margin: 5px;
+  }
+  .footer-menu > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-menu > ul ul {
+    display: block;
+  }
+  .footer-menu li:hover .footer-submenu {
+    animation: none;
+  }
+  .footer-submenu {
+    position: static;
   }
 }
 @media screen and (min-width: 1080px) {
