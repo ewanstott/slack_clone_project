@@ -28,9 +28,16 @@ p {
   max-height: 350px !important;
 }
 
-.video {
+.small-video {
   max-width: 100%;
   max-height: 400px;
+  padding-top: 30px;
+}
+
+.small-video-2 {
+  width: 400px;
+  margin-left: 50%;
+  padding-top: 30px;
 }
 
 .arrow {
@@ -53,8 +60,8 @@ p {
   cursor: pointer;
   box-shadow: inset 0 0 0 1px #611f69;
   background-color: white;
-  color: #4a154b;
-  border: 1px solid #4a154b;
+  color: #541554;
+  border: 1px solid #541554;
 }
 
 .button-purple-menu {
@@ -72,7 +79,7 @@ p {
   text-decoration: none;
   cursor: pointer;
   box-shadow: inset 0 0 0 1px #611f69;
-  background-color: #4a154b;
+  background-color: #541554;
   color: white;
   border: 1px solid white;
 }
@@ -91,8 +98,8 @@ p {
   box-shadow: inset 0 0 0 1px #611f69;
   width: 100%;
   background-color: white;
-  color: #4a154b;
-  border: 1px solid #4a154b;
+  color: #541554;
+  border: 1px solid #541554;
 }
 
 .button-purple {
@@ -108,7 +115,7 @@ p {
   cursor: pointer;
   box-shadow: inset 0 0 0 1px #611f69;
   width: 100%;
-  background-color: #4a154b;
+  background-color: #541554;
   color: white;
   border: 1px solid white;
 }
@@ -139,7 +146,7 @@ p {
 }
 .google-btn .btn-text {
   text-align: center;
-  line-height: 50px;
+  line-height: 30px;
   margin: 11px 11px 0 0;
   color: #fff;
   font-size: 14px;
@@ -156,7 +163,7 @@ p {
 .header {
   padding: 15px 25px;
   transition: 0.3s;
-  background-color: #4a154b;
+  background-color: #541554;
 }
 
 .logo a {
@@ -165,7 +172,7 @@ p {
 
 .logo-white a img {
   display: inline-block;
-  height: 60px;
+  height: 25px;
 }
 
 .navigation {
@@ -187,7 +194,7 @@ p {
   height: 100%;
   padding: 25px;
   transition: right 0.3s ease;
-  z-index: 3;
+  z-index: 1;
 }
 
 .menu li {
@@ -199,14 +206,18 @@ p {
   text-decoration: none;
   display: block;
   padding: 5px 10px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 550;
   line-height: 1;
-  transition: 0.3s;
+}
+
+.submenu li a {
+  font-weight: 100;
 }
 
 .submenu li a:hover {
   text-decoration: underline;
+  color: black;
 }
 
 .hamburger {
@@ -216,7 +227,7 @@ p {
   background: #fff;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 4;
+  z-index: 6;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -246,6 +257,7 @@ p {
   right: 20px;
   width: 30px;
   height: 100%;
+  z-index: 7;
   cursor: pointer;
   opacity: 0;
 }
@@ -293,7 +305,7 @@ p {
 
 .toggle-menu:checked + .hamburger {
   background-color: black;
-  z-index: 4;
+  z-index: 7;
 }
 
 .submenu {
@@ -302,6 +314,10 @@ p {
   display: none;
   background-color: white;
   border-radius: 5px;
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 
 .menu li:hover .submenu {
@@ -333,7 +349,7 @@ p {
   }
 }
 .hero {
-  background-color: #4a154b;
+  background-color: #541554;
   padding: 25px;
 }
 
@@ -354,7 +370,7 @@ p {
 }
 
 .trust {
-  background-color: rgb(244, 237, 228);
+  background-color: #f6efe7;
 }
 
 .trust h3 {
@@ -381,7 +397,7 @@ p {
 }
 
 .background-cream {
-  background-color: rgb(244, 237, 228);
+  background-color: #f6efe7;
 }
 
 .background-white {
@@ -417,6 +433,10 @@ p {
   justify-content: flex-end;
 }
 
+.right {
+  justify-self: end;
+}
+
 .teams {
   text-align: center;
 }
@@ -435,7 +455,7 @@ p {
 .percentages {
   font-size: 2.3rem;
   text-align: center;
-  color: #4a154b;
+  color: #541554;
   max-width: 200px;
   margin: 0 auto;
 }
@@ -488,7 +508,7 @@ p {
 }
 
 .background-purple {
-  background-color: #4a154b;
+  background-color: #541554;
   color: white;
   text-align: center;
   min-height: 370px;
@@ -517,6 +537,7 @@ footer ul li {
   list-style: none;
   font-weight: 700;
   font-size: 0.875rem;
+  margin-bottom: 25px;
 }
 
 footer ul li a {
@@ -529,7 +550,7 @@ footer ul li a {
   display: none;
   text-decoration: none;
   border-radius: 5px;
-  padding: 10px 5px;
+  padding-top: 15px;
   width: 100%;
 }
 
@@ -563,29 +584,63 @@ footer ul li a {
   transform: scale(1.2);
 }
 
+@media screen and (max-width: 767px) {
+  .large-video {
+    display: none;
+  }
+}
 @media screen and (min-width: 767px) {
   .container-hero {
     flex-direction: row;
+    justify-content: flex-start;
+    background-color: #541554;
+  }
+  .body-container-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "top-left top-right" "middle-left middle-right" "bottom-left bottom-right";
+    align-items: center;
+    justify-content: center;
+  }
+  .top-left {
+    grid-area: top-left;
+  }
+  .top-right {
+    grid-area: top-right;
+  }
+  .middle-left {
+    grid-area: middle-left;
+  }
+  .middle-right {
+    grid-area: middle-right;
+  }
+  .bottom-left {
+    grid-area: bottom-left;
+  }
+  .bottom-right {
+    grid-area: bottom-right;
+  }
+  .hero {
+    min-width: 60%;
   }
   .hero h1 {
-    max-width: 65%;
     text-align: left;
   }
   .hero p {
     text-align: left;
-    max-width: 60%;
     padding: 20px 0px;
   }
-  .btn-text {
-    text-align: center;
-    line-height: 50px;
-  }
   .hero-video {
-    display: flex;
-    float: right;
     max-width: 700px;
-    max-height: 386px;
-    margin-left: 50px;
+  }
+  .small-video,
+  .small-video-2 {
+    display: none;
+  }
+  .large-video {
+    max-width: 100%;
+    max-height: 400px;
+    padding-top: 30px;
   }
   .social-menu {
     display: flex;
@@ -619,7 +674,7 @@ footer ul li a {
   }
   .logo-white a img {
     display: inline-block;
-    height: 60px;
+    height: 30px;
   }
   .button-purple-menu,
   .button-purple-menu {
@@ -636,7 +691,7 @@ footer ul li a {
     align-items: center;
     position: relative;
     right: 0;
-    background: #4a154b;
+    background: #541554;
     color: white;
     transition: none;
   }
@@ -660,13 +715,20 @@ footer ul li a {
     border: none;
   }
   .button-white-menu {
-    width: auto;
+    min-width: auto;
   }
-  .menu li a,
+  .menu li a {
+    padding: 20px;
+    color: white;
+    font-size: 0.8rem;
+  }
   .menu li a:hover {
     padding: 20px;
     color: white;
     font-size: 0.8rem;
+  }
+  .submenu > li > a:hover {
+    color: black;
   }
   .menu ul li a {
     color: black;
