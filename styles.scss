@@ -1,7 +1,6 @@
 // Colors:
 $themePurpleColour: #541554;
 $themeCreamColour: #f6efe7;
-// yellow: rgb(236, 178, 46)
 
 // @mixin
 
@@ -37,10 +36,6 @@ $themeCreamColour: #f6efe7;
   box-shadow: inset 0 0 0 1px #611f69;
 }
 
-// .teams .button-white {
-//   margin: 5px;
-// }
-
 // General CSS
 * {
   padding: 0px;
@@ -48,10 +43,6 @@ $themeCreamColour: #f6efe7;
   font-family: "Inter", Helvetica;
   letter-spacing: 0.5px;
   box-sizing: border-box;
-  //   max-width: 100%;
-  //   overflow-x: hidden;
-  //   display: flex;
-  //   flex-direction: column;
 }
 
 .container-hero {
@@ -168,11 +159,6 @@ $button-active-blue: #1669f2;
 // Header
 
 .header {
-  //   position: relative;
-  //   width: 100%;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
   padding: 15px 25px;
   transition: 0.3s;
   background-color: $themePurpleColour;
@@ -339,7 +325,7 @@ $button-active-blue: #1669f2;
 
 .menu li:hover .submenu {
   display: block;
-  animation: slideup 0.3s ease;
+  animation: slideup 0.7s ease;
 }
 
 .menu li:hover img {
@@ -367,17 +353,6 @@ $button-active-blue: #1669f2;
     transform: none;
   }
 }
-
-// @keyframes slideleft {
-//   0% {
-//     opacity: 0;
-//     transform: translateX(18px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: none;
-//   }
-// }
 
 // Hero
 .hero {
@@ -428,11 +403,6 @@ $button-active-blue: #1669f2;
 .logo {
   margin: 10px;
 }
-
-// .trust {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-// }
 
 // Value Props
 
@@ -506,12 +476,6 @@ $button-active-blue: #1669f2;
   padding-bottom: 30px;
 }
 
-// .hero-video {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
 .video-container {
   position: relative;
 }
@@ -543,9 +507,6 @@ $button-active-blue: #1669f2;
   padding-top: 10px;
   margin: 25px;
   padding-bottom: 10px;
-}
-.customer-stories {
-  //   padding-top: 25px;
 }
 
 .container-two h2,
@@ -660,10 +621,6 @@ footer ul li a {
   .container-hero {
     flex-direction: row;
     justify-content: flex-start;
-    //     display: grid;
-    //     grid-template-columns: 50% 50%;
-    //     align-items: center;
-    //     justify-content: center;
     background-color: $themePurpleColour;
   }
 
@@ -717,11 +674,6 @@ footer ul li a {
   .hero-video {
     max-width: 700px;
   }
-
-  // .btn-text {
-  //   text-align: center;
-  //   line-height: 50px;
-  // }
 
   .small-video,
   .small-video-2 {
@@ -780,11 +732,6 @@ footer ul li a {
     max-width: 50px;
   }
 
-  //   .button-white,
-  //   .google-btn {
-  //     max-width: 40rem;
-  //   }
-
   .hamburger,
   .toggle-menu {
     display: none;
@@ -805,17 +752,12 @@ footer ul li a {
   }
 
   .menu-arrow {
-    //   display: block;
     position: absolute;
-    // right: 50%;
     top: 49%;
     width: 8px;
     margin-left: 2px;
-    // height: 5px;
-    // background-size: 8px 5px;
     background-position-y: center;
     transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    //   transform: translateY(-50%);
   }
 
   .navigation input {
@@ -852,14 +794,6 @@ footer ul li a {
   .submenu > li > a:hover {
     color: black;
   }
-
-  //   .menu > li > a:hover {
-  //     color: black; /* or the color you want for top-level menu items on hover */
-  //   }
-
-  //   .menu li .submenu li a {
-  //     color: inherit;
-  //   }
 
   .menu ul li a {
     color: black;

@@ -322,7 +322,7 @@ p {
 
 .menu li:hover .submenu {
   display: block;
-  animation: slideup 0.3s ease;
+  animation: slideup 0.7s ease;
 }
 
 .menu li:hover img {
