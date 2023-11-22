@@ -96,7 +96,8 @@ p {
   text-decoration: none;
   cursor: pointer;
   box-shadow: inset 0 0 0 1px #611f69;
-  width: 100%;
+  width: 95.5%;
+  margin-bottom: 2px;
   background-color: white;
   color: #541554;
   border: 1px solid #541554;
@@ -114,19 +115,54 @@ p {
   text-decoration: none;
   cursor: pointer;
   box-shadow: inset 0 0 0 1px #611f69;
-  width: 100%;
+  width: 95.5%;
+  margin-bottom: 2px;
+  background-color: #541554;
+  color: white;
+  border: 1px solid white;
+}
+
+.body-button-white {
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.28;
+  padding: 19px 40px 20px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #611f69;
+  background-color: white;
+  color: #541554;
+  border: 1px solid #541554;
+}
+
+.body-button-purple {
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.28;
+  padding: 19px 40px 20px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px #611f69;
   background-color: #541554;
   color: white;
   border: 1px solid white;
 }
 
 .google-btn {
-  width: 100%;
+  width: 95%;
   height: 50px;
   background-color: #4285f4;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .google-btn .google-icon-wrapper {
   position: absolute;
@@ -599,6 +635,7 @@ footer ul li a {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas: "top-left top-right" "middle-left middle-right" "bottom-left bottom-right";
+    grid-gap: 20px;
     align-items: center;
     justify-content: center;
   }
