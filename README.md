@@ -5,7 +5,6 @@ Creating a clone of the Slack website's front end at the very beginning of my fu
 
 💻 Tech Stack
 
-Tech:
 - Vanilla CSS
 - HTML
 - Mobile-Friendly
